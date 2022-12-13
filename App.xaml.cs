@@ -1,7 +1,9 @@
 ﻿namespace Fodor_Emanuela_Lab7;
 using System;
-using Nume_Pren_Lab7.Data;
+using Fodor_Emanuela_Lab7.Data;
 using System.IO;
+
+
 public partial class App : Application
 {
     static ShoppingListDatabase database;
@@ -12,16 +14,16 @@ public partial class App : Application
             if (database == null)
             {
                 database = new
-               ShoppingListDatabase(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.
-               LocalApplicationData), "ShoppingList.db3"));
+                ShoppingListDatabase(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.
+                LocalApplicationData), "ShoppingList.db3"));
             }
             return database;
         }
     }
     public App()
-	{
-		InitializeComponent();
+    {
+        InitializeComponent();
 
-		MainPage = new AppShell();
-	}
+        MainPage = new AppShell();
+    }
 }
